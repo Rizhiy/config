@@ -2,7 +2,8 @@
 override_git_prompt_colors() {
   GIT_PROMPT_THEME_NAME="Custom"
 
-  GIT_PROMPT_STAGED="${Red}● "
+  GIT_PROMPT_STAGED="${Green}● "
+  GIT_PROMPT_CHANGED="${Red}✚ "
 
   GIT_PROMPT_COMMAND_OK="${BoldGreen}"
   GIT_PROMPT_COMMAND_FAIL="${BoldRed}"
