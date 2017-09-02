@@ -4,4 +4,6 @@ GIT_PROMPT_THEME_FILE=~/config/.git-prompt-colors.sh
 source ~/config/bash-git-prompt/gitprompt.sh
 
 # Point VIM to correct config
-MYVIMRC=~/config/.vimrc
+# Need to check this later
+# MYVIMRC=~/config/.vimrc
+ln -s ~/config/.vimrc ~
