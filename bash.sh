@@ -6,4 +6,6 @@ source ~/config/bash-git-prompt/gitprompt.sh
 # Point VIM to correct config
 # Need to check this later
 # MYVIMRC=~/config/.vimrc
-ln -s ~/config/.vimrc ~
+if [ ! -e ~/.vimrc ]; then
+    ln -s ~/config/.vimrc ~
+fi
