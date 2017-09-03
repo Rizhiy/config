@@ -1,5 +1,5 @@
 # Folder where this repo was cloned
-CONFIG_FOLDER=$(pwd)
+CONFIG_FOLDER="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Custom prompt
 __GIT_PROMPT_DIR=$CONFIG_FOLDER/bash-git-prompt
