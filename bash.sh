@@ -6,19 +6,11 @@ __GIT_PROMPT_DIR=$CONFIG_FOLDER/bash-git-prompt
 GIT_PROMPT_THEME_FILE=$CONFIG_FOLDER/.git-prompt-colors.sh
 source $CONFIG_FOLDER/bash-git-prompt/gitprompt.sh
 
-# Point VIM to correct config
-# Need to check this later
-# MYVIMRC=~/config/.vimrc
-if [ ! -e ~/.vimrc ]; then
-    ln -s $CONFIG_FOLDER/.vimrc ~
-fi
 
-# Point tmux to correct config
-if [ ! -e ~/.tmux.conf ]; then
-    ln -s $CONFIG_FOLDER/.tmux.conf ~
-fi
+declare -a configFiles=('.vimrc' '.tmux.conf' '.gitconfig')
 
-# Point git to correct config
-if [ ! -e ~/.gitconfig ]; then
-    ln -s $CONFIG_FOLDER/.gitconfig ~
-fi
+for configFile in ${configFiles[@]}; do
+    if [ ! -e ~/$configFile ]; then
+        ln -s $CONFIG_FOLDER/$configFile ~
+    fi
+done
