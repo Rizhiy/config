@@ -1,5 +1,5 @@
-" Line numbers
-set number
+" Line hybrid line numbers
+set number relativenumber
 
 " Tab = 4 spaces
 filetype plugin indent on
