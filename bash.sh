@@ -12,3 +12,8 @@ source $CONFIG_FOLDER/bash-git-prompt/gitprompt.sh
 if [ ! -e ~/.vimrc ]; then
     ln -s $CONFIG_FOLDER/.vimrc ~
 fi
+
+# Point tmux to correct config
+if [ ! -e ~/.tmux.conf ]; then
+    ln -s $CONFIG_FOLDER/.tmux.conf ~
+fi
