@@ -17,3 +17,8 @@ fi
 if [ ! -e ~/.tmux.conf ]; then
     ln -s $CONFIG_FOLDER/.tmux.conf ~
 fi
+
+# Point git to correct config
+if [ ! -e ~/.gitconfig ]; then
+    ln -s $CONFIG_FOLDER/.gitconfig ~
+fi
