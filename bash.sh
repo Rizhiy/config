@@ -14,3 +14,7 @@ for configFile in ${configFiles[@]}; do
         ln -s $CONFIG_FOLDER/$configFile ~
     fi
 done
+
+# Increase history size
+HISTSIZE=10000
+HISTFILESIZE=100000
