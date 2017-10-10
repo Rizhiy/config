@@ -15,6 +15,10 @@ for configFile in ${configFiles[@]}; do
     fi
 done
 
+#i3
+rm ~/.config/i3/config
+ln -s $CONFIG_FOLDER/.i3 ~/.config/i3/config
+
 # Increase history size
 HISTSIZE=10000
 HISTFILESIZE=100000
