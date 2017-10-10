@@ -8,6 +8,8 @@ for configFile in ${configFiles[@]}; do
     fi
 done
 
-#i3
+#i3 and sway
 rm ~/.config/i3/config
+rm ~/.config/sway/config
 ln -s $CONFIG_FOLDER/.i3 ~/.config/i3/config
+ln -s $CONFIG_FOLDER/.i3 ~/.config/sway/config
