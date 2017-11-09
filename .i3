@@ -96,7 +96,7 @@ bindsym $mod+a focus parent
 bindsym $mod+1 workspace main
 bindsym $mod+2 workspace web
 bindsym $mod+3 workspace files
-bindsym $mod+4 workspace 4
+bindsym $mod+4 workspace IDE
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -108,7 +108,7 @@ bindsym $mod+0 workspace 10
 bindsym $mod+Shift+1 move container to workspace main
 bindsym $mod+Shift+2 move container to workspace web
 bindsym $mod+Shift+3 move container to workspace files
-bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+4 move container to workspace IDE
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
@@ -161,3 +161,4 @@ exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
 # Assign programs to workspaces
 assign [class="chrome"] web
 assign [class="files"] files
+assign [class="charm"] IDE
