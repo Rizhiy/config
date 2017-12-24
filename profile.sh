@@ -9,10 +9,10 @@ for configFile in ${configFiles[@]}; do
 done
 
 # Config files in other folders
-declare -a configFolders=('i3' 'sway')
+declare -a configFolders=('i3' 'sway' 'polybar')
 
 for configFolder in ${configFolders[@]}; do
-    if [ ! -e ~/.config/i3 ]; then
+    if [ -d ~/.config/$configFolder ]; then
         rm ~/.config/$configFolder/config
         ln -s $CONFIG_FOLDER/.$configFolder ~/.config/$configFolder/config
     fi

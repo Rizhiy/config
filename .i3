@@ -149,12 +149,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
-
 # Natural scroll
 exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
 
@@ -180,3 +174,6 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+#Launch Polybar where appropriate
+exec_always --no-startup-id ~/config/polybar/launch.sh
