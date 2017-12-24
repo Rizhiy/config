@@ -8,8 +8,12 @@ for configFile in ${configFiles[@]}; do
     fi
 done
 
-#i3 and sway
-rm ~/.config/i3/config
-rm ~/.config/sway/config
-ln -s $CONFIG_FOLDER/.i3 ~/.config/i3/config
-ln -s $CONFIG_FOLDER/.i3 ~/.config/sway/config
+# Config files in other folders
+declare -a configFolders=('i3' 'sway')
+
+for configFolder in ${configFolders[@]}; do
+    if [ ! -e ~/.config/i3 ]; then
+        rm ~/.config/$configFolder/config
+        ln -s $CONFIG_FOLDER/.$configFolder ~/.config/$configFolder/config
+    fi
+done
