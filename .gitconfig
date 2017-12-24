@@ -3,3 +3,5 @@
 [user]
 	email = vasart169@gmail.com
 	name = Artem Vasenin
+[push]
+	defaults = simple
