@@ -1,6 +1,6 @@
 CONFIG_FOLDER="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-declare -a configFiles=('.vimrc' '.tmux.conf' '.gitconfig')
+declare -a configFiles=('.vimrc' '.tmux.conf' '.gitconfig' '.Xdefaults')
 
 for configFile in ${configFiles[@]}; do
     if [ ! -e ~/$configFile ]; then
@@ -17,3 +17,6 @@ for configFolder in ${configFolders[@]}; do
         ln -s $CONFIG_FOLDER/.$configFolder ~/.config/$configFolder/config
     fi
 done
+
+# Set default terminal to urxvt
+export TERMINAL="urxvt"
