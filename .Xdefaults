@@ -34,6 +34,7 @@ URxvt.intensityStyles: false
 URxvt.depth:       32
 URxvt.font:        xft:monospace:size=12
 URxvt.scrollBar:   false
+URxvt.saveLines:   8192
 URxvt.cursorColor: white
 URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.perl-lib:        $HOME/.config/Scripts
