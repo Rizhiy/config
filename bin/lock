@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Make sure we are on the left monitor
+i3-msg -q focus output left
+
+# Create first window and move it to the right monitor
+urxvt -e cmatrix -ab &
+sleep 0.4
+i3-msg -q fullscreen
+i3-msg -q move window to output right
+
+# Create second window
+urxvt -e cmatrix -ab &
+sleep 0.4
+i3-msg -q fullscreen
+
+i3lock -nd;
+i3-msg -q kill
+i3-msg -q focus output right
+i3-msg -q kill
+i3-msg -q focus output left

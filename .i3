@@ -184,3 +184,6 @@ focus_follows_mouse no
 # Add russian keyboard
 exec "setxkbmap -layout gb,ru"
 exec "setxkbmap -option 'grp:win_space_toggle'"
+
+# Enable Compton
+exec --no-startup-id compton --config ~/config/.compton.conf
