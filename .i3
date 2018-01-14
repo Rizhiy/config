@@ -187,3 +187,6 @@ exec "setxkbmap -option 'grp:win_space_toggle'"
 
 # Enable Compton
 exec --no-startup-id compton --config ~/config/.compton.conf
+
+# Background
+exec --no-startup-id feh --bg-fill ~/Pictures/bg.png
