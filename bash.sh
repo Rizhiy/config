@@ -9,3 +9,6 @@ source $CONFIG_FOLDER/bash-git-prompt/gitprompt.sh
 # Increase history size
 HISTSIZE=10000
 HISTFILESIZE=100000
+
+# Exit ranger in current dir
+alias ranger='ranger --choosedir=$HOME/rangerdir; LASTDIR=`cat $HOME/rangerdir`; cd "$LASTDIR"'
