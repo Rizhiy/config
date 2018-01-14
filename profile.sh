@@ -20,3 +20,6 @@ done
 
 # Set default terminal to urxvt
 export TERMINAL="urxvt"
+
+# Prepend anaconda to path
+export PATH=/home/rizhiy/anaconda3/bin:$PATH
