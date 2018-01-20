@@ -4,13 +4,13 @@
 i3-msg -q focus output left
 
 # Create first window and move it to the right monitor
-uxterm -fa 'Monospace' -fs 14 -e cmatrix -ab &
+uxterm -fs 14 -e matrix -o &
 sleep 0.4
 i3-msg -q fullscreen
 i3-msg -q move window to output right
 
 # Create second window
-uxterm -fa 'Monospace' -fs 14 -e cmatrix -ab &
+uxterm -fs 14 -e matrix -o &
 sleep 0.4
 i3-msg -q fullscreen
 

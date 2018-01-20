@@ -2,3 +2,6 @@
 	path = bash-git-prompt
 	url = git@github.com:magicmonty/bash-git-prompt.git
 	branch = master
+[submodule "unimatrix"]
+	path = unimatrix
+	url = git@github.com:will8211/unimatrix.git
