@@ -1,2 +1,2 @@
-python ../unimatrix/unimatrix.py
+python ~/config/unimatrix/unimatrix.py "$@"
 
