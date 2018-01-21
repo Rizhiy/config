@@ -116,6 +116,13 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+
+# Assign workspaces to specific monitors
+workspace "main" output "DP-2"
+workspace "web" output "DP-4"
+workspace "files" output "DP-4"
+workspace "IDE" output "DP-2"
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -154,8 +161,11 @@ exec --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113
 
 # Assign programs to workspaces
 assign [class="chrome"] web
-assign [class="files"] files
+assign [class="pcmanfm"] files
+assign [class="nautilus"] files
 assign [class="charm"] IDE
+assign [class="octave-gui"] IDE
+assign [class="octave"] IDE
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -189,4 +199,4 @@ exec "setxkbmap -option 'grp:win_space_toggle'"
 exec --no-startup-id compton --config ~/config/.compton.conf
 
 # Background
-exec --no-startup-id feh --bg-fill ~/Pictures/bg.png
+exec --no-startup-id feh --bg-fill ~/Pictures/bg.jpg
