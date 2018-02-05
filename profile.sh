@@ -26,3 +26,7 @@ export PATH=/home/rizhiy/anaconda3/bin:$PATH
 
 # Prepend our executables to PATH
 export PATH=$CONFIG_FOLDER/bin:$PATH
+
+# Add russian keyboard
+setxkbmap -layout gb,ru
+setxkbmap -option 'grp:win_space_toggle'
