@@ -1,6 +1,6 @@
 CONFIG_FOLDER="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-declare -a configFiles=('.vimrc' '.tmux.conf' '.gitconfig' '.Xdefaults')
+declare -a configFiles=('.vimrc' '.tmux.conf' '.gitconfig' '.Xdefaults' '.zshrc')
 
 for configFile in ${configFiles[@]}; do
     if [ ! -e ~/$configFile ]; then
