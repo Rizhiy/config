@@ -6,3 +6,5 @@
 [push]
 	defaults = simple
 	default = simple
+[core]
+	editor = vim
