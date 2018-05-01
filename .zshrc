@@ -108,3 +108,9 @@ source ~/.fonts/*.sh
 
 # Remove seconds from time
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
+
+# Advanced `vcs` color customization
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='green'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='blue'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='red'
+
