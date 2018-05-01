@@ -4,6 +4,29 @@
 # Path to your oh-my-zsh installation.
   export ZSH=/home/rizhiy/.oh-my-zsh
 
+# POWERLEVEL9K Variables
+# Modify start and end of line
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time context)
+
+# Change conda color
+POWERLEVEL9K_ANACONDA_BACKGROUND='green'
+
+# Awesome fonts
+source ~/.fonts/*.sh
+
+# Remove seconds from time
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
+
+# Advanced `vcs` color customization
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='green'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='blue'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='red'
+
+# Shorter Pathnames
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=5
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -95,22 +118,4 @@ source $ZSH/oh-my-zsh.sh
 
 # added by Anaconda3 installer
 export PATH="/home/rizhiy/anaconda3/bin:$PATH"
-
-# Modify start and end of line
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time context)
-
-# Change conda color
-POWERLEVEL9K_ANACONDA_BACKGROUND='green'
-
-# Awesome fonts
-source ~/.fonts/*.sh
-
-# Remove seconds from time
-POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
-
-# Advanced `vcs` color customization
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='green'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='blue'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='red'
 
