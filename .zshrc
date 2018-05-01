@@ -100,6 +100,9 @@ export PATH="/home/rizhiy/anaconda3/bin:$PATH"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time context)
 
+# Change conda color
+POWERLEVEL9K_ANACONDA_BACKGROUND='green'
+
 # Awesome fonts
 source ~/.fonts/*.sh
 
