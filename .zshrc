@@ -27,6 +27,14 @@ POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='red'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=5
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='cyan'
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='black'
+POWERLEVEL9K_CONTEXT_REMOTE_BACKGROUND='green'
+POWERLEVEL9K_CONTEXT_REMOTE_FOREGROUND='black'
+
+POWERLEVEL9K_STATUS_OK_BACKGROUND='yellow'
+POWERLEVEL9K_STATUS_OK_FOREGROUND='green'
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
