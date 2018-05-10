@@ -1,8 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export TERM='xterm-256color'
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/rizhiy/.oh-my-zsh
+export ZSH=/home/rizhiy/.oh-my-zsh
 
 # POWERLEVEL9K Variables
 # Modify start and end of line
@@ -126,4 +127,8 @@ source $ZSH/oh-my-zsh.sh
 
 # added by Anaconda3 installer
 export PATH="/home/rizhiy/anaconda3/bin:$PATH"
+export PATH="/home/rizhiy/miniconda3/bin:$PATH"
+
+# Remove shared history
+unsetopt share_history
 
