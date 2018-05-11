@@ -132,3 +132,5 @@ export PATH="/home/rizhiy/miniconda3/bin:$PATH"
 # Remove shared history
 unsetopt share_history
 
+# More info
+alias  lh='ls -alh'
