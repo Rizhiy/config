@@ -21,8 +21,9 @@ done
 # Set default terminal to urxvt
 export TERMINAL="urxvt"
 
-# Prepend anaconda to path
-export PATH=/home/rizhiy/anaconda3/bin:$PATH
+# added by Anaconda3 installer
+export PATH="/home/rizhiy/anaconda3/bin:$PATH"
+export PATH="/home/rizhiy/miniconda3/bin:$PATH"
 
 # Prepend our executables to PATH
 export PATH=$CONFIG_FOLDER/bin:$PATH

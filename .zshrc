@@ -125,12 +125,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# added by Anaconda3 installer
-export PATH="/home/rizhiy/anaconda3/bin:$PATH"
-export PATH="/home/rizhiy/miniconda3/bin:$PATH"
-
 # Remove shared history
 unsetopt share_history
 
 # More info
 alias  lh='ls -alh'
+
+SOURCE=${(%):-%N}
+while [ -h "$SOURCE" ]; do
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+DOTFILES_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+bash $DOTFILES_DIR/bash.sh

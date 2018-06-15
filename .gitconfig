@@ -4,9 +4,12 @@
 	email = vasart169@gmail.com
 	name = Artem Vasenin
 [push]
-	defaults = simple
 	default = simple
 [core]
 	editor = vim
+    autocrlf = input
 [lfs]
     fetchexclude = *
+[color "diff"]
+	meta = bold
+	new = cyan
