@@ -8,3 +8,5 @@
 	default = simple
 [core]
 	editor = vim
+[lfs]
+    fetchexclude = *
