@@ -8,8 +8,11 @@
 [core]
 	editor = vim
     autocrlf = input
-[lfs]
-    fetchexclude = *
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
+	required = true
 [color "diff"]
 	meta = bold
 	new = cyan
