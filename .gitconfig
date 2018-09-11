@@ -16,3 +16,5 @@
 [color "diff"]
 	meta = bold
 	new = cyan
+[submodule]
+	recurse = true
