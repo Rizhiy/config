@@ -32,4 +32,3 @@ export PATH=$CONFIG_FOLDER/bin:$PATH
 setxkbmap -layout gb,ru
 setxkbmap -option 'grp:win_space_toggle'
 
-alias act='source activate "$(basename "$(pwd)")"'
