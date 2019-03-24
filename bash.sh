@@ -19,5 +19,5 @@ HISTFILESIZE=100000
 
 # Exit ranger in current dir
 alias ranger='ranger --choosedir=$HOME/rangerdir; LASTDIR=`cat $HOME/rangerdir`; cd "$LASTDIR"'
-# Shortcut for quick activation
-alias act='source activate "$(basename "$(pwd)")"'
+# Shortcut for quick conda activation
+alias act='conda activate "$(basename "$(pwd)")"'
