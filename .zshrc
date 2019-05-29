@@ -2,6 +2,18 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export TERM='xterm-256color'
 
+# Set config install directory
+SOURCE=${(%):-%N}
+while [ -h "$SOURCE" ]; do
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+DOTFILES_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+# Set fzf installation directory path
+export FZF_BASE=$DOTFILES_DIR/fzf
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/rizhiy/.oh-my-zsh
 
@@ -130,14 +142,6 @@ unsetopt share_history
 
 # More info
 alias  lh='ls -alh'
-
-SOURCE=${(%):-%N}
-while [ -h "$SOURCE" ]; do
-DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
-SOURCE="$(readlink "$SOURCE")"
-  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
-done
-DOTFILES_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 source $DOTFILES_DIR/bash.sh
 

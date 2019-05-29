@@ -5,3 +5,6 @@
 [submodule "unimatrix"]
 	path = unimatrix
 	url = git@github.com:will8211/unimatrix.git
+[submodule "fzf"]
+	path = fzf
+	url = https://github.com/junegunn/fzf.git
