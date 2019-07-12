@@ -1,4 +1,4 @@
-CONFIG_FOLDER="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+CONFIG_FOLDER="$HOME/config"
 
 declare -a configFiles=('.vimrc' '.tmux.conf' '.gitconfig' '.Xdefaults' '.zshrc')
 
