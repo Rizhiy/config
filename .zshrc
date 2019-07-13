@@ -146,16 +146,22 @@ alias  lh='ls -alh'
 
 source $DOTFILES_DIR/bash.sh
 
+if [ -d "$HOME/miniconda3" ]; then
+    condadir="$HOME/miniconda3"
+elif [ -d "$HOME/anaconda3" ]; then
+    condadir="$HOME/anaconda3"
+fi
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/rizhiy/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$condadir/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/rizhiy/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/rizhiy/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$condadir/etc/profile.d/conda.sh" ]; then
+        . "$condadir/etc/profile.d/conda.sh"
     else
-        export PATH="/home/rizhiy/anaconda3/bin:$PATH"
+        export PATH="$condadir/bin:$PATH"
     fi
 fi
 unset __conda_setup
