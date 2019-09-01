@@ -16,3 +16,8 @@ HISTFILESIZE=100000
 alias ranger='ranger --choosedir=$HOME/rangerdir; LASTDIR=`cat $HOME/rangerdir`; cd "$LASTDIR"'
 # Shortcut for quick conda activation
 alias act='conda activate "$(basename "$(pwd)")"'
+
+# More consice man pages
+cheat() {
+    curl cheat.sh/"$1"
+}
