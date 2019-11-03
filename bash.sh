@@ -21,3 +21,5 @@ alias act='conda activate "$(basename "$(pwd)")"'
 cheat() {
     curl cheat.sh/"$1"
 }
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
