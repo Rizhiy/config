@@ -1,0 +1,7 @@
+htop
+vim
+tmux
+cmake
+git
+build-essential
+
