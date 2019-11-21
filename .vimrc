@@ -83,3 +83,7 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
+
+" Disable ex mode for now
+map q: <Nop>
+nnoremap Q <nop>
