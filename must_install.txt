@@ -5,4 +5,5 @@ tmux
 cmake
 git
 build-essential
-
+curl
+wget
