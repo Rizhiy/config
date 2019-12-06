@@ -7,3 +7,4 @@ git
 build-essential
 curl
 wget
+guake
