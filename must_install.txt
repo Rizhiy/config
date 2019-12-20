@@ -1,7 +1,10 @@
+zsh
 htop
 vim
 tmux
 cmake
 git
 build-essential
-
+curl
+wget
+guake
