@@ -25,13 +25,14 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
 " File Tree
 Plugin 'scrooloose/nerdtree'
-" Syntax
-Plugin 'scrooloose/syntastic'
+map <C-o> :NERDTreeToggle<CR>
 " Scheme
 Plugin 'vim-airline/vim-airline'
 " Fzf
 set rtp+=~/config/fzf
 Plugin 'junegunn/fzf.vim'
+" Useful file operations
+Plugin 'tpope/vim-eunuch'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
