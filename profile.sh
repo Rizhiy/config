@@ -32,3 +32,8 @@ export PATH=$CONFIG_FOLDER/bin:$PATH
 setxkbmap -layout gb,ru
 setxkbmap -option 'grp:win_space_toggle'
 
+# Install Vim plugins
+vim +PluginInstall +qall &>/dev/null &
+# Compile YCM
+python ~/.vim/bundle/youcompleteme/install.py --clangd-completer &>/dev/null &
+disown;
