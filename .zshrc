@@ -141,9 +141,6 @@ source $ZSH/oh-my-zsh.sh
 # Remove shared history
 unsetopt share_history
 
-# More info
-alias  lh='ls -alh'
-
 source $DOTFILES_DIR/bash.sh
 
 if [ -d "$HOME/miniconda3" ]; then

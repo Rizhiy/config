@@ -12,6 +12,9 @@ fi
 HISTSIZE=10000
 HISTFILESIZE=100000
 
+# More info
+alias  lh='ls -alh'
+
 # Exit ranger in current dir
 alias ranger='ranger --choosedir=$HOME/rangerdir; LASTDIR=`cat $HOME/rangerdir`; cd "$LASTDIR"'
 # Shortcut for quick conda activation
