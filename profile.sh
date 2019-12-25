@@ -43,7 +43,6 @@ setxkbmap -layout gb,ru
 setxkbmap -option 'grp:win_space_toggle'
 
 # Install Vim plugins
-vim +PluginInstall +qall &>/dev/null &
+vim +PluginInstall +qall &>/dev/null & disown;
 # Compile YCM
-python ~/.vim/bundle/youcompleteme/install.py --clangd-completer &>/dev/null &
-disown;
+python ~/.vim/bundle/youcompleteme/install.py --clangd-completer &>/dev/null & disown;
