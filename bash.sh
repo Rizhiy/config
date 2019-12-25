@@ -25,3 +25,23 @@ cheat() {
     curl cheat.sh/"$1"
 }
 
+if [ -d "$HOME/miniconda3" ]; then
+    condadir="$HOME/miniconda3"
+elif [ -d "$HOME/anaconda3" ]; then
+    condadir="$HOME/anaconda3"
+fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$("$condadir/bin/conda" "shell.bash" "hook" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$condadir/etc/profile.d/conda.sh" ]; then
+        . "$condadir/etc/profile.d/conda.sh"
+    else
+        export PATH="$condadir/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
