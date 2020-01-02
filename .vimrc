@@ -28,6 +28,8 @@ Plugin 'tpope/vim-surround'
 " File Tree
 Plugin 'scrooloose/nerdtree'
 map <C-o> :NERDTreeToggle<CR>
+" Git status
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Scheme
 Plugin 'vim-airline/vim-airline'
 " Fzf
