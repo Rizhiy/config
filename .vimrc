@@ -35,6 +35,10 @@ set rtp+=~/config/fzf
 Plugin 'junegunn/fzf.vim'
 " Useful file operations
 Plugin 'tpope/vim-eunuch'
+" Comments
+Plugin 'preservim/nerdcommenter'
+" Indent guide
+Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -139,3 +143,7 @@ endfunction
 " Disable ex mode for now
 map q: <Nop>
 nnoremap Q <nop>
+
+" show tab and eol
+set list
+set listchars=tab:▸\
