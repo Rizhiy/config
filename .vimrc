@@ -148,4 +148,4 @@ nnoremap Q <nop>
 
 " show tab and eol
 set list
-set listchars=tab:▸\
+set listchars=tab:▸\ ,trail:·
