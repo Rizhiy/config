@@ -61,11 +61,11 @@ filetype plugin indent on    " required
 " Line hybrid line numbers
 set number relativenumber
 
-" Tab = 4 spaces
-filetype plugin indent on
+" Set tab length to 4 spaces
 set tabstop=4
 set shiftwidth=4
-set expandtab
+" Expand tabs to spaces in python files
+autocmd Filetype python setlocal expandtab
 
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start
