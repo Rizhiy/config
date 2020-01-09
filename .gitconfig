@@ -1,13 +1,10 @@
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-[user]
-	email = vasart169@gmail.com
-	name = Artem Vasenin
+	lg = log --all --graph --oneline --abbrev-commit
 [push]
 	default = simple
 [core]
 	editor = vim
-    autocrlf = input
+	autocrlf = input
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge --skip -- %f

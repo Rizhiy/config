@@ -46,3 +46,10 @@ setxkbmap -option 'grp:win_space_toggle'
 vim +PluginInstall +qall &>/dev/null & disown;
 # Compile YCM
 python ~/.vim/bundle/youcompleteme/install.py --clangd-completer &>/dev/null & disown;
+
+# Check gitconfig
+grep_end="\[include\]\n\tpath = config/.gitconfig\n"
+insert_end="[include]\n\tpath = config/.gitconfig\n"
+if [[ -z "$( grep -Pzo "$grep_end" $HOME/.gitconfig )" ]]; then
+    echo "$insert_end" >> $HOME/.gitconfig
+fi
