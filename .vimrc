@@ -41,6 +41,10 @@ Plugin 'tpope/vim-eunuch'
 Plugin 'preservim/nerdcommenter'
 " Indent guide
 Plugin 'Yggdroot/indentLine'
+" Tmux config help
+Plugin 'tmux-plugins/vim-tmux'
+" Reload after reboot
+Plugin 'tpope/vim-obsession'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
