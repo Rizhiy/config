@@ -156,3 +156,6 @@ set listchars=tab:▸\ ,trail:·
 
 " swap directory
 set directory=/tmp
+
+" use system clipboard
+set clipboard=unnamedplus
