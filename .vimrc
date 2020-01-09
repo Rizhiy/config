@@ -153,3 +153,6 @@ nnoremap Q <nop>
 " show tab and eol
 set list
 set listchars=tab:▸\ ,trail:·
+
+" swap directory
+set directory=/tmp
