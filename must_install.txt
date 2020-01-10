@@ -8,3 +8,4 @@ build-essential
 curl
 wget
 guake
+chrome-gnome-shell
