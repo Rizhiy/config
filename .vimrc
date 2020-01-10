@@ -137,3 +137,8 @@ endfunction
 " Disable ex mode for now
 map q: <Nop>
 nnoremap Q <nop>
+
+" Edit vimjc
+nnoremap <Leader>e :tabnew $MYVIMRC<CR>
+" Reload vimrc
+nnoremap <Leader>r :source $MYVIMRC<CR>
