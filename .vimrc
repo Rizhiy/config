@@ -1,3 +1,5 @@
+set encoding=utf-8
+
 set nocompatible
 filetype off
 
@@ -26,6 +28,8 @@ Plugin 'tpope/vim-surround'
 " File Tree
 Plugin 'scrooloose/nerdtree'
 map <C-o> :NERDTreeToggle<CR>
+" Git status
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Scheme
 Plugin 'vim-airline/vim-airline'
 " Fzf
@@ -33,6 +37,14 @@ set rtp+=~/config/fzf
 Plugin 'junegunn/fzf.vim'
 " Useful file operations
 Plugin 'tpope/vim-eunuch'
+" Comments
+Plugin 'preservim/nerdcommenter'
+" Indent guide
+Plugin 'Yggdroot/indentLine'
+" Tmux config help
+Plugin 'tmux-plugins/vim-tmux'
+" Reload after reboot
+Plugin 'tpope/vim-obsession'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -53,11 +65,11 @@ filetype plugin indent on    " required
 " Line hybrid line numbers
 set number relativenumber
 
-" Tab = 4 spaces
-filetype plugin indent on
+" Set tab length to 4 spaces
 set tabstop=4
 set shiftwidth=4
-set expandtab
+" Expand tabs to spaces in python files
+autocmd Filetype python setlocal expandtab
 
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start
@@ -142,3 +154,13 @@ nnoremap Q <nop>
 nnoremap <Leader>e :tabnew $MYVIMRC<CR>
 " Reload vimrc
 nnoremap <Leader>r :source $MYVIMRC<CR>
+
+" show tab and eol
+set list
+set listchars=tab:▸\ ,trail:·
+
+" swap directory
+set directory=/tmp
+
+" use system clipboard
+set clipboard=unnamedplus

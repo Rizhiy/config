@@ -18,6 +18,16 @@ for configFolder in ${configFolders[@]}; do
     fi
 done
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 # Set default terminal to urxvt
 export TERMINAL="urxvt"
 
@@ -33,7 +43,13 @@ setxkbmap -layout gb,ru
 setxkbmap -option 'grp:win_space_toggle'
 
 # Install Vim plugins
-vim +PluginInstall +qall &>/dev/null &
+vim +PluginInstall +qall &>/dev/null & disown;
 # Compile YCM
-python ~/.vim/bundle/youcompleteme/install.py --clangd-completer &>/dev/null &
-disown;
+python ~/.vim/bundle/youcompleteme/install.py --clangd-completer &>/dev/null & disown;
+
+# Check gitconfig
+grep_end="\[include\]\n\tpath = config/.gitconfig\n"
+insert_end="[include]\n\tpath = config/.gitconfig\n"
+if [[ -z "$( grep -Pzo "$grep_end" $HOME/.gitconfig )" ]]; then
+    echo "$insert_end" >> $HOME/.gitconfig
+fi

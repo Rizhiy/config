@@ -9,3 +9,4 @@ curl
 wget
 guake
 chrome-gnome-shell
+vim-gnome
