@@ -4,6 +4,7 @@
 	c = commit
 	d = diff
 	a = add
+	cm = commit -m
 [push]
 	default = simple
 [core]
