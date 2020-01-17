@@ -2,6 +2,8 @@
 	lg = log --all --graph --oneline --abbrev-commit
 	s = status
 	c = commit
+	d = diff
+	a = add
 [push]
 	default = simple
 [core]
