@@ -1,5 +1,7 @@
 [alias]
 	lg = log --all --graph --oneline --abbrev-commit
+	s = status
+	c = commit
 [push]
 	default = simple
 [core]
