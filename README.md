@@ -1,12 +1,16 @@
 # Different config files for Ubuntu
 
-Currently you meant to clone this into your home directory, will work on custom directory later.
+Currently you are meant to clone this into your home directory, will work on handling different directiories later.
 
-Add the following to your ~/.bashrc:
+Add the following to your `~/.bashrc`:
 ```bash
-    source config/bash.sh
+	source config/bash.sh
 ```
-and the following to your ~/.profile:
+or the following to `~/.zshrc`:
+```zsh
+	source config/.zshrc
+```
+and the following to `~/.profile`:
 ```bash
-    source config/profile.sh
+	source config/profile.sh
 ```
