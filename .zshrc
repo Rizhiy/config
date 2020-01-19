@@ -25,9 +25,6 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time c
 # Change conda color
 POWERLEVEL9K_ANACONDA_BACKGROUND='green'
 
-# Awesome fonts
-source ~/.fonts/*.sh
-
 # Remove seconds from time
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
 

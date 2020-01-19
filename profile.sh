@@ -53,3 +53,12 @@ insert_end="[include]\n\tpath = config/.gitconfig\n"
 if [[ -z "$( grep -Pzo "$grep_end" $HOME/.gitconfig )" ]]; then
     echo "$insert_end" >> $HOME/.gitconfig
 fi
+
+# Install fonts
+cd "$CONFIG_FOLDER/fonts"
+./install.sh
+cd -
+cd "$CONFIG_FOLDER/awesome-terminal-fonts"
+./install.sh
+cd -
+sed 's/<family>PragmataPro<\/family>/<family>FontAwesome<\/family>/g' ~/.config/fontconfig/conf.d/10-symbols.conf
