@@ -1,3 +1,5 @@
+#!/bin/bash
+
 CONFIG_FOLDER="$HOME/config"
 
 declare -a configFiles=('.vimrc' '.tmux.conf' '.gitconfig' '.Xdefaults' '.zshrc')
