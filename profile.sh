@@ -52,8 +52,8 @@ python ~/.vim/bundle/youcompleteme/install.py --clangd-completer &>/dev/null & d
 # Check gitconfig
 grep_end="\[include\]\n\tpath = config/.gitconfig\n"
 insert_end="[include]\n\tpath = config/.gitconfig\n"
-if [[ -z "$( grep -Pzo "$grep_end" $HOME/.gitconfig )" ]]; then
-    echo "$insert_end" >> $HOME/.gitconfig
+if [[ -z "$( grep -Pzo "$grep_end" "$HOME"/.gitconfig | tr '\0' '\n' )" ]]; then
+    echo "$insert_end" >> "$HOME"/.gitconfig
 fi
 
 # Install fonts
