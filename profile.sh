@@ -56,7 +56,7 @@ fi
 
 # Install fonts
 cd "$CONFIG_FOLDER/fonts"
-./install.sh
+./install.sh &>/dev/null & disown;
 cd -
 cd "$CONFIG_FOLDER/awesome-terminal-fonts"
 ./install.sh
