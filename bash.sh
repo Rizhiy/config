@@ -18,7 +18,12 @@ alias  lh='ls -alh'
 # Exit ranger in current dir
 alias ranger='ranger --choosedir=$HOME/rangerdir; LASTDIR=`cat $HOME/rangerdir`; cd "$LASTDIR"'
 # Shortcut for quick conda activation
-alias act='conda activate "$(basename "$(pwd)")"'
+conda_deactivate () {
+	while [ -n "$CONDA_DEFAULT_ENV" ]; do
+		conda deactivate
+	done
+}
+alias act='conda_deactivate; conda activate "$(basename "$(pwd)")"'
 
 # More consice man pages
 cheat() {
