@@ -58,9 +58,14 @@ fi
 
 # Install fonts
 cd "$CONFIG_FOLDER/fonts"
-./install.sh
+./install.sh &>/dev/null & disown;
 cd -
 cd "$CONFIG_FOLDER/awesome-terminal-fonts"
 ./install.sh
 cd -
 sed 's/<family>PragmataPro<\/family>/<family>FontAwesome<\/family>/g' ~/.config/fontconfig/conf.d/10-symbols.conf &>/dev/null
+
+# Install fzf
+cd "$CONFIG_FOLDER/fzf"
+./install &>/dev/null & disown;
+cd -
