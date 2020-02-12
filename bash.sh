@@ -53,5 +53,3 @@ unset __conda_setup
 
 # Add cuda to path
 export PATH=/usr/local/cuda/bin:/usr/local/cuda/NsightCompute-2019.1${PATH:+:${PATH}}
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
