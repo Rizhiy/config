@@ -17,6 +17,21 @@ export FZF_BASE=$DOTFILES_DIR/fzf
 # Path to your oh-my-zsh installation.
 export ZSH=/home/rizhiy/.oh-my-zsh
 
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+
+# Install plugins
+source "$DOTFILES_DIR"/antigen/antigen.zsh
+antigen use oh-my-zsh
+antigen bundle git
+antigen bundle fzf
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen theme bhilburn/powerlevel9k powerlevel9k
+antigen apply
+
+
 # POWERLEVEL9K Variables
 # Modify start and end of line
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda dir vcs)
@@ -102,6 +117,8 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   fzf
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
