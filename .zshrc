@@ -97,7 +97,6 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
-
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
@@ -153,6 +152,6 @@ source $ZSH/oh-my-zsh.sh
 # Remove shared history
 unsetopt share_history
 
-source $DOTFILES_DIR/bash.sh
+source $DOTFILES_DIR/common.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
